@@ -1,0 +1,70 @@
+// FLEX mixin
+@mixin flex ($dir: null, $wrap: null, $just: space-around, $align: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// CENTERING ELEMENT mixin
+@mixin center($var: 90%) {
+  width: $var;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// ROUND BORDER
+@mixin round($var, $border: null) {
+  width: $var;
+  height: $var;
+  border: $border;
+  border-radius: 50%;
+}
+
+// FONT mixin
+@mixin text($size, $height: null, $style: null, $weight: null, $color: null) {
+  font-size: $size;
+  line-height: $height;
+  font-style: $style;
+  font-weight: $weight;
+  color: $color;
+}
+
+// MEDIA QUERY MIXIN
+@mixin mq ($break) {
+  @if $break == "mobile" {
+    @media (min-width: $small) and (max-width: $mobile) {
+      @content;
+    }
+  }
+  @else if $break == "laptop" {
+    @media (min-width: $mobile + 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop" {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+  @else {
+    @error "You gone goofed. No value for `#{break}`";
+  }
+}
+
+/*
+@mixin primary-font($style: null, $weight: null, $font: $primary-font) {
+  font-family: $primary-font;
+  font-style: $style;
+  font-weight: $weight;
+}
+*/
+
+/*
+@mixin secondary-font($style: null, $weight: null, $font: $secondary-font) {
+  font-family: $secondary-font;
+  font-style: $style;
+  font-weight: $weight;
+}
+*/
