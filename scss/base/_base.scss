@@ -1,0 +1,5 @@
+// Can only apply styles to *, <ul>, <p> and <a> tags.
+
+a {
+  @extend %link;
+}

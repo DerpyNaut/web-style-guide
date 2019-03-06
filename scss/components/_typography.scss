@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/th/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/th/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+  @include text($color: $text-color, $height: 1.5);
+  font-family: 'robotoregular';
+}
+
+.headline--primary {
+  @include text($size: 2rem, $color: $primary-color, $weight: bold, $word: -5px);
+  margin: 0 auto 1.5rem 1rem;
+}
+
+.blockquote {
+  @include text($size: 1.5rem, $style: italic, $height: 125%);
+  width: 80%;
+  margin: 2rem auto 4rem auto;
+  padding-left: 1rem;
+  border-left: 5px solid $primary-color;
+  border-radius: 5px;
+  @include mq (desktop) {
+    border-left: 10px solid $primary-color;
+  }
+}
+
+.headline--secondary {
+  margin: 0 auto 1rem 0.5rem;
+}

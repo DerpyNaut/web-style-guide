@@ -1,0 +1,21 @@
+.form {
+  @include flex($dir: column, $align: null);
+  margin: 2rem 0;
+}
+
+.form__label--hidden {
+    display: none;
+}
+
+.form__input {
+  margin: 1rem;
+  border: none;
+  border-bottom: 5px solid $primary-color;
+  padding: 0 0 0.5rem 1rem;
+  font-weight: 700;
+  outline: none;
+}
+
+#forms {
+  margin-left: 2rem;
+}

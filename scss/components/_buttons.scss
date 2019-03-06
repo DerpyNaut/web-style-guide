@@ -1,0 +1,29 @@
+.btn {
+  &--default {
+    background-color: $default-color;
+  }
+  &--success {
+    background-color: $success-color;
+  }
+  &--error {
+    background-color: $error-color;
+  }
+  &--warning {
+    background-color: $warning-color;
+  }
+  &--info {
+    background-color: $info-color;
+  }
+}
+
+.theme__colors {
+  border: none;
+}
+
+button {
+  width: 100%;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}

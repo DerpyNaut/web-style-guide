@@ -1,0 +1,28 @@
+%link {
+  color: $link-color;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+%img {
+  width: 100%;
+  margin: auto;
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+%headline {
+  color: $primary-color;
+  font-weight: bold;
+  margin: 1rem 0 1.25rem 0.5rem;
+}
+
+%nav__item {
+  text-align: center;
+  margin: 1rem 0;
+  border-radius: 5px;
+  &:hover {
+    background-color: $primary-color;
+  }
+}

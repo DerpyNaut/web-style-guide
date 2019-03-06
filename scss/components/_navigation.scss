@@ -1,0 +1,25 @@
+.nav__item {
+  @extend %nav__item;
+  @include mq (desktop) {
+    margin-right: 1rem;
+    padding: 1.5rem;
+  }
+  a {
+    color: $text-color;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.nav {
+  @include mq (desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+}

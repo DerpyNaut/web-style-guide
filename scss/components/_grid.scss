@@ -1,0 +1,61 @@
+.container {
+  width: 90%;
+  margin: 1rem auto;
+  @include mq (desktop) {
+    width: 80%;
+  }
+}
+
+.grid__row {
+  @include flex($dir: column, $just: center, $align: stretch);
+  // @include flex($dir: column, $just: space-around, $align: center);
+  margin: 2rem 0;
+  @include mq (desktop) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.grid__col--12 {
+  @include mq (desktop) {
+    @include flex ($dir: row, $just: space-around);
+    width: 100%;
+  }
+}
+
+.grid__row {
+  @for $i from 3 through 12 {
+    .theme__colors.grid__col--#{$i} {
+      background-color: map-get($grid-colors, grid-#{$i});
+    }
+  }
+}
+
+.grid__col {
+  @for $i from 3 through 12  {
+    &--#{$i} {
+      width: $i * 8.3%;
+    }
+  }
+}
+
+.theme__colors {
+  text-align: center;
+}
+
+.grid__row .grid__col--12 .theme__colors {
+  margin: 1rem 0;
+  @include mq(desktop) {
+    margin: 0 1rem;
+  }
+}
+
+.grid__row .theme__colors {
+  border-radius: 5px;
+  margin: 0.2rem 0;
+  padding: 1rem 0;
+  @include mq(desktop) {
+    margin: 0 0.5rem;
+  }
+}

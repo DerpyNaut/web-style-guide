@@ -1,30 +1,43 @@
-
 // COLORS
-$primary-color: rgb(88, 255, 193);
-$text-color: rgb(129, 129, 129);
-$link-color: rgb(88, 222, 252);
+$grey: rgba(129, 129, 129, .9);
+$light-green: rgb(45, 217, 179);
+$bright-green: rgb(99, 204, 130);
+$cyan: rgb(88, 222, 252);
+$dark-purple: rgb(146, 123, 193);
+$orange: rgb(253, 120, 86);
+$brick-red: rgb(228, 117, 122);
+
+
+
+// MAiN COLORS
+$primary-color: $light-green;
+$text-color: $grey;
+$link-color: $cyan;
 
 // BUTTON COLORS
-$info-color: rgb(146, 123, 193);
-$warning-color: rgb(253, 120, 86);
-$error-color: rgb(228, 117, 122);
-$success-color: rgb(99, 204, 130);
-$default-color: rgb(88, 222, 252);
+$info-color: $dark-purple;
+$warning-color: $orange;
+$error-color: $brick-red;
+$success-color: $bright-green;
+$default-color: $cyan;
 
 // GRID COLORS
-$grid-12: rgb(128, 232, 209);
-$grid-8: rgb(253, 159, 133);
-$grid-7: rgb(236, 159, 163);
-$grid-6: rgb(63, 171, 202);
-$grid-5: rgb(136, 217, 160);
-$grid-4: rgb(126, 230, 253);
-$grid-3: rgb(222, 178, 238);
+$grid-colors : (
+ grid-12: rgb(128, 232, 209),
+ grid-8: rgb(253, 159, 133),
+ grid-7: rgb(236, 159, 163),
+ grid-6: rgb(63, 171, 202),
+ grid-5: rgb(136, 217, 160),
+ grid-4: rgb(126, 230, 253),
+ grid-3: rgb(222, 178, 238),
+);
+
+
 
 // FONTS
 $primary-font: 'Roboto', sans-serif;
 
 // BREAK POINTS
-
 $small: 1px;
 $mobile: 480px;
 $desktop: 1400px;
