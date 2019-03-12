@@ -12,7 +12,7 @@
 }
 
 .headline--primary {
-  @include text($size: 2rem, $color: $primary-color, $weight: bold, $word: -5px);
+  @include text($size: 2rem, $color: $primary-color, $weight: bold);
   margin: 0 auto 1.5rem 1rem;
 }
 

@@ -2,11 +2,15 @@
   @extend %nav__item;
   @include mq (desktop) {
     margin-right: 1rem;
-    padding: 1.5rem;
+    padding: 0.5rem 1rem;
   }
   a {
+    @include mq (desktop) {
+      padding: 0;
+    }
+    display: block;
     color: $text-color;
-    font-weight: bold;
+    font-weight: 400;
     width: 100%;
     height: 100%;
     padding: 1rem 0;

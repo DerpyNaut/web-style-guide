@@ -1,5 +1,6 @@
 .container {
   width: 90%;
+  max-width: 1400px;
   margin: 1rem auto;
   @include mq (desktop) {
     width: 80%;
@@ -9,6 +10,11 @@
 .grid__row {
   @include flex($dir: column, $just: center, $align: stretch);
   // @include flex($dir: column, $just: space-around, $align: center);
+  @for $i from 3 through 12 {
+    .theme__colors.grid__col--#{$i} {
+      background-color: map-get($grid-colors, grid-#{$i});
+    }
+  }
   margin: 2rem 0;
   @include mq (desktop) {
     flex-direction: row;
@@ -24,18 +30,12 @@
   }
 }
 
-.grid__row {
-  @for $i from 3 through 12 {
-    .theme__colors.grid__col--#{$i} {
-      background-color: map-get($grid-colors, grid-#{$i});
-    }
-  }
-}
-
 .grid__col {
-  @for $i from 3 through 12  {
-    &--#{$i} {
-      width: $i * 8.3%;
+  @include mq (desktop) {
+    @for $i from 3 through 12  {
+      &--#{$i} {
+        width: $i * 8.3%;
+      }
     }
   }
 }
