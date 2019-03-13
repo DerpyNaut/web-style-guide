@@ -1,3 +1,18 @@
+a {
+  color: #58defc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav__item {
+  text-align: center;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+.nav__item:hover {
+  background-color: #2dd9b3;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,21 +63,6 @@ table {
   border-spacing: 0;
 }
 
-a {
-  color: #58defc;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.nav__item {
-  text-align: center;
-  margin: 1rem 0;
-  border-radius: 5px;
-}
-.nav__item:hover {
-  background-color: #2dd9b3;
-}
-
 .btn--default {
   background-color: #58defc;
 }
@@ -83,7 +83,7 @@ a {
   border: none;
 }
 
-.grid__col--12 button {
+.grid__col--12 button, .form button {
   width: 100%;
   border: none;
   color: white;
