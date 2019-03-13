@@ -41,7 +41,9 @@
 }
 
 .theme__colors {
-  text-align: center;
+  @include mq (desktop) {
+    text-align: center;
+  }
 }
 
 .grid__row .grid__col--12 .theme__colors {

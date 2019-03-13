@@ -247,8 +247,10 @@ table {
   }
 }
 
-.theme__colors {
-  text-align: center;
+@media (min-width: 1400px) {
+  .theme__colors {
+    text-align: center;
+  }
 }
 
 .grid__row .grid__col--12 .theme__colors {
